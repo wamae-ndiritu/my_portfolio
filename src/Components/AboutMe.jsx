@@ -91,43 +91,45 @@ const AboutMe = () => {
           <p>
             Unfortunately, I realized that I had not met the cut off points to
             join any of my dream University in Kenya. I started thinking that I
-            was over-ambitious, I can't pursue my dream course and become an
-            engineer. Besides, I would even think of going back to high school
-            and try another opportunity.
+            was over-ambitious, I can&apos;t pursue my dream course and become
+            an engineer. Besides, I would even think of going back to high
+            school and try another opportunity.
           </p>
           <br />
           <p>
             Fortunately, I was invited to an alumni Peer-teaching programme in
             my former high school, St. Luke Karundas Sec Sch. In this new
             opportunity, I spent some time with the school Librarian who
-            happened to be School's ICT technologist. He would give me small
-            tasks on a computer when I was not teaching my peers, and in the
-            process, I would learn how to use a computer. Within no time, I
-            started "falling in love" with Computers. I have never had such an
-            opportunity to use a computer before but now I could see I had all
-            the time to use the school's computers. My "New Love" for machine
-            drove me to applying for an ICT course at the University of Nairobi
-            after realizing that I had met the cut off points unlike the other
-            one. At the end of my 4 months in peer-teaching, I got an admission
-            letter from the University of Nairobi to pursue Bachelor of
-            Education in Information, Communication & Technology.
+            happened to be School&apos;s ICT technologist. He would give me
+            small tasks on a computer when I was not teaching my peers, and in
+            the process, I would learn how to use a computer. Within no time, I
+            started &apos;falling in love&apos; with Computers. I have never had
+            such an opportunity to use a computer before but now I could see I
+            had all the time to use the school&apos;s computers. My &apos;New
+            Love&apos; for machine drove me to applying for an ICT course at the
+            University of Nairobi after realizing that I had met the cut off
+            points unlike the other one. At the end of my 4 months in
+            peer-teaching, I got an admission letter from the University of
+            Nairobi to pursue Bachelor of Education in Information,
+            Communication & Technology.
           </p>
           <br />
           <p>
             Without wasting any more time, I started exploring the field bearing
-            in mind that it's now my career am pursuing. I realized that I can
-            still be an engineer whom I admired, but now I will not be building
-            mechanical systems; hardware, but instead I will be building systems
-            that live in the Internet, i.e softwares. With my "Love" for
-            engineering, I look forward to widening my knowledge and skills in
-            Software engineering... I can now read and write computer programs,
-            I felt this as the greatest achievement in my life.
+            in mind that it&apos;s now my career am pursuing. I realized that I
+            can still be an engineer whom I admired, but now I will not be
+            building mechanical systems; hardware, but instead I will be
+            building systems that live in the Internet, i.e softwares. With my
+            &apos;Love&apos; for engineering, I look forward to widening my
+            knowledge and skills in Software engineering... I can now read and
+            write computer programs, I felt this as the greatest achievement in
+            my life.
           </p>
           <br />
           <p>
             At the end of my first year in Campus, I had started building and
-            deploying static web application. I'm now in my 2<sup>nd</sup> year
-            and have done a couple of dynamic web application projects
+            deploying static web application. I&apos;m now in my 2<sup>nd</sup>{" "}
+            year and have done a couple of dynamic web application projects
           </p>
           <br />
           <p>

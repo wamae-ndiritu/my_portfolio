@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import DownloadIcon from "@mui/icons-material/Download";
@@ -8,15 +8,8 @@ import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import Typed from "typed.js";
 
 const Heroe = () => {
-  const el = useRef(null);
-  const nameRef = useRef(null);
-  // Create reference to store the Typed instance itself
-  const typed = React.useRef(null);
-  const typedName = useRef(null);
-
   const downloadCV = () => {
     // using Java Script method to get PDF file
     fetch("/Assets/docs/Ndiritu_Wamae_CV.pdf").then((response) => {
@@ -31,41 +24,6 @@ const Heroe = () => {
       });
     });
   };
-
-  useEffect(() => {
-    const options = {
-      strings: ["Ndiritu Wamae"],
-      typeSpeed: 250,
-      backSpeed: 70,
-    };
-
-    typedName.current = new Typed(nameRef.current, options);
-    return () => {
-      typedName.current.destroy();
-    };
-  }, []);
-
-  useEffect(() => {
-    const options = {
-      strings: [
-        "FrontEnd Development",
-        "Backend Development",
-        "Systems Intergartion",
-        "Payments Intergration e.g Lipa Na Mpesa Online..",
-      ],
-      typeSpeed: 100,
-      backSpeed: 30,
-    };
-
-    // elRef refers to the <span> rendered below
-    typed.current = new Typed(el.current, options);
-
-    return () => {
-      // Make sure to destroy Typed instance during cleanup
-      // to prevent memory leaks
-      typed.current.destroy();
-    };
-  }, []);
 
   window.addEventListener("scroll", function () {
     const socialIcons = document.querySelector("#social-block");
@@ -95,56 +53,67 @@ const Heroe = () => {
   }, [showLinks]);
 
   return (
-    <div className='heroe-section' id='heroe-section'>
+    <div className='heroe-section' id='heroe-section home'>
       <div className='heroe-wrapper'>
         <div className='heroe-navbar' id='heroe-navbar'>
           <div className='navbar-left'>
-            <h3>Nelite dev</h3>
+            <h3>
+              <a href='#home'>Wamae Dev</a>
+            </h3>
           </div>
           <div className='navbar-right' ref={linksContainerRef}>
             <ul className='nav-links' ref={linksRef}>
-              <li>Home</li>
-              <li>About Me</li>
-              <li>Portfolio</li>
-              <li>Contacts</li>
-              <li>Socials</li>
+              <li>
+                <a href='/#about'>About Me</a>
+              </li>
+              <li>
+                <a href='#services'>Services</a>
+              </li>
+              <li>
+                <a href='#projects'>Projects</a>
+              </li>
+              <li>
+                <a href='#blogs'>Blogs</a>
+              </li>
+              <li>
+                <a href='#contacts'>Contacts</a>
+              </li>
             </ul>
           </div>
+          <button className='main-btn'>
+            <TapAndPlayIcon />
+            {""} Hire Me
+          </button>
           <div className='menu-icon' onClick={toggleLinks}>
             {showLinks ? <CloseIcon /> : <MenuIcon />}
           </div>
         </div>
         <div className='heroe-center'>
           <div className='heroe-info'>
-            <span className='h1'>
-              <span style={{ color: "#fff" }}>Hi, I am</span>{" "}
-              <span className='typed-h1' ref={nameRef}></span>
-            </span>
-            <h4>A FullStack Web Developer |</h4>
-            <span className='h4 typed' ref={el}></span>
+            <h4>Wamae Ndiritu | Software Engineer</h4>
+            <p>
+              Hi, I&apos;m a dedicated Software Engineer passionate about making
+              a positive impact in the tech world and beyond. I love solving
+              real-world problems with innovative solutions, using my
+              programming skills to create practical applications. I&apos;m
+              constantly adapting to the fast-paced tech environment and strive
+              to make meaningful contributions through cutting-edge technology.
+            </p>
+            <div className='heroe-btn-cont'>
+              <button className='main-btn'>
+                <TapAndPlayIcon />
+                {""} Hire Me
+              </button>
+              <button className='main-btn-1' onClick={downloadCV}>
+                Download CV <DownloadIcon />
+              </button>
+            </div>
           </div>
           <div className='heroe-profile-cont'>
             <div className='heroe-profile'>
               <img src='/Assets/Images/potrait.png' alt='' />
             </div>
           </div>
-        </div>
-        <div className='heroe-quote'>
-          <p>
-            <i className='fa fa-quote-left icon' aria-hidden='true'></i>
-            Programmers are the architects of the digital world, shaping
-            tomorrows innovations with lines of code today.
-            <i className='fa fa-quote-right icon' aria-hidden='true'></i>
-          </p>
-        </div>
-        <div className='heroe-btn-cont'>
-          <button className='main-btn'>
-            <TapAndPlayIcon />
-            {""} Hire Me
-          </button>
-          <button className='main-btn-1' onClick={downloadCV}>
-            Download CV <DownloadIcon />
-          </button>
         </div>
         <div className='heroe-socials'>
           <div className='heroe-icon'>

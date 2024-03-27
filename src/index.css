@@ -14,7 +14,7 @@
 
 :root {
   /* --color-main: #44ff00; */
-  --color-main: #485460;
+  --color-main: red;
   --transition: all 0.3s linear;
 }
 
@@ -24,12 +24,22 @@ body {
   overflow-x: hidden;
 }
 
+.heroe-navbar a{
+  color: inherit;
+  text-decoration: inherit;
+  border-bottom: 1px solid transparent;
+}
+
+a:active{
+  color: red;
+  border-bottom: 1px solid red;
+}
+
 .active-header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.8);
   z-index: 999;
   display: flex;
   width: 100%;
@@ -37,6 +47,7 @@ body {
   padding: 0 50px;
   justify-content: center;
   align-items: center;
+  background-color: #ffffff;
 }
 
 .icon {
@@ -51,15 +62,11 @@ body {
 #heroe-section {
   width: 100%;
   height: 100vh;
-  /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.226), rgba(0, 0, 0, 0.226)),
-    url("/public/Assets/Images/wamae-web-photo.jpg"); */
-  background-repeat: no-repeat;
-  background-position-y: 12%;
-  background-size: cover;
 }
 
 .heroe-section {
   position: relative;
+  background-color: #fff;
 }
 
 .heroe-wrapper {
@@ -68,8 +75,7 @@ body {
   padding: 30px;
   width: 100%;
   height: 100%;
-  background-color: #0b292673;
-  /* background-color: rgba(0, 0, 0, 0.8); */
+  /* background-color: rgba(0, 0, 0, 0.4); */
   z-index: 2;
   cursor: pointer;
 }
@@ -77,16 +83,17 @@ body {
 .heroe-navbar {
   display: flex;
   width: 100%;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  /* margin: 10px 30px; */
+  border: 1px dotted red;
   margin-bottom: 50px;
 }
 
 .navbar-left h3 {
-  color: var(--color-main);
-  font-size: 35px;
-  text-transform: uppercase;
+  font-size: 24px;
+  text-transform: capitalize;
+  color: red;
+  margin: auto 0;
 }
 
 .navbar-right {
@@ -97,7 +104,9 @@ body {
 .navbar-right ul {
   display: inline-flex;
   list-style-type: none;
+  margin: auto 0;
 }
+
 
 .menu-icon {
   color: #fff;
@@ -105,7 +114,6 @@ body {
 }
 
 .navbar-right ul li {
-  color: #fff;
   text-transform: uppercase;
   font-size: 12px;
   padding: 0px 10px;
@@ -124,20 +132,20 @@ body {
   flex: 2;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 .heroe-profile-cont {
   flex: 1;
   display: flex;
   justify-content: center;
-  align-items: center\;;
+  align-items: center;
 }
 
 .heroe-profile {
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
+  width: 350px;
+  height: 350px;
+  border-radius: 20px;
+  border: 4px solid red;
 }
 
 .heroe-profile img {
@@ -150,7 +158,6 @@ body {
 .heroe-center .h1 {
   font-size: 30px;
   margin-bottom: 20px;
-  color: var(--color-main);
   text-align: center;
 }
 
@@ -160,7 +167,6 @@ body {
 }
 
 .heroe-icon {
-  color: #fff;
   margin: 30px 10px;
 }
 
@@ -178,17 +184,10 @@ body {
 }
 
 .heroe-center h4 {
-  color: #fff;
   text-align: center;
   font-size: 18px;
 }
 
-.typed {
-  color: var(--color-main);
-  text-transform: uppercase;
-  text-align: center;
-  font-size: 18px;
-}
 
 h6 {
   font-size: 20px;
@@ -201,7 +200,6 @@ h6 {
 }
 
 .heroe-quote p {
-  color: #fff;
   font-size: 16px;
   padding: 5px;
   font-family: cursive;
@@ -231,37 +229,38 @@ h6 {
 
 .main-btn,
 .main-btn-1 {
-  width: 250px;
+  width: 150px;
   margin: 10px;
-  border: 1px solid gray;
-  color: #000;
-  text-transform: uppercase;
+  border: 1px solid red;
   border-radius: 10px;
   padding: 10px 0;
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 16px;
   cursor: pointer;
   /* transition: 0.6s ease-in-out; */
   transition: var(--transition);
 }
 
 .main-btn {
-  background-color: var(--color-main);
+  background-color: black;
+  color: #fff;
+  border-color: transparent;
 }
 
 .main-btn-1 {
   background-color: transparent;
-  color: var(--color-main);
+  border-color: red;
 }
 
 .main-btn:hover {
   background-color: transparent;
-  color: var(--color-main);
+  color: #000;
+  border-color: red;
 }
 
 .main-btn-1:hover {
-  background-color: var(--color-main);
-  color: #000;
+  background-color: black;
+  color: white;
+  border-color: transparent;
 }
 
 .socials-block {
