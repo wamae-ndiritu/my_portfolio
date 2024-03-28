@@ -5,17 +5,34 @@ import AboutMe from "./Components/AboutMe";
 import ServiceSection from "./Components/services/ServiceScetion";
 import ProjectSection from "./Components/projects/ProjectSection";
 import ArticlesSection from "./Components/articles/ArticlesSection";
+import { useEffect, useState } from "react";
+import LoadingSpinner from "./loading/LoadingSpinner";
 
 function App() {
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+      const timer = setTimeout(() => {
+        setIsLoading(false);
+      }, 2000);
+
+      return () => clearTimeout(timer);
+    }, []);
   return (
-    <div>
-      <Heroe />
-      <AboutMe />
-      <ServiceSection />
-      <ProjectSection />
-      <ArticlesSection />
-      <Location />
-    </div>
+    <>
+      {isLoading ? (
+        <LoadingSpinner />
+      ) : (
+        <div>
+          <Heroe />
+          <AboutMe />
+          <ServiceSection />
+          <ProjectSection />
+          <ArticlesSection />
+          <Location />
+        </div>
+      )}
+    </>
   );
 }
 
