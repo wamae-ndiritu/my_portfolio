@@ -533,6 +533,10 @@ h6 {
     width: 200px;
     height: 200px;
   }
+
+  .about-left{
+    flex: 100%;
+  }
 }
 
 @media (max-width: 528px) {
