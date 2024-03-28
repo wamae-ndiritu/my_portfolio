@@ -80,9 +80,9 @@ const Heroe = () => {
               </li>
             </ul>
           </div>
-          <a href='tel:+254740924507' className='btn main-btn'>
+          <a href='tel:+254740924507' className='btn main-btn header-btn'>
             <TapAndPlayIcon />
-            {""} Hire Me
+            {""} <span>Hire Me</span>
           </a>
           <div className='menu-icon' onClick={toggleLinks}>
             {showLinks ? <CloseIcon /> : <MenuIcon />}
