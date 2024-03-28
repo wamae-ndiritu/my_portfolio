@@ -32,7 +32,7 @@ const Heroe = () => {
 
   window.addEventListener("scroll", function () {
     const activeHeader = document.querySelector("#heroe-navbar");
-    activeHeader?.classList.toggle("active-header", window.scrollY > 400);
+    activeHeader?.classList.toggle("active-header", window.scrollY > 800);
   });
 
   const [showLinks, setShowLinks] = useState(false);

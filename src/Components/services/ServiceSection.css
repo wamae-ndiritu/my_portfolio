@@ -1,0 +1,22 @@
+
+.service-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.service-item h3{
+    font-size: 22px;
+    margin: 10px 0;
+}
+.service-icon{
+    background-color: aliceblue;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+}

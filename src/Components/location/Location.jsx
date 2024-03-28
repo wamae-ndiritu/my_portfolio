@@ -1,7 +1,7 @@
 
 const Location = () => {
   return (
-    <div className="my-3 location-cont">
+    <div className="my-3 location-cont" id="contacts">
       <div className="row location-row">
         <div className="col-lg-6 col-md-6 col-12">
           <form className="form">
@@ -22,7 +22,7 @@ const Location = () => {
               ></textarea>
             </div>
             <div className="mb-3 btn-cont">
-              <button>Send Message</button>
+              <button className="text-white">Send Message</button>
             </div>
           </form>
         </div>
