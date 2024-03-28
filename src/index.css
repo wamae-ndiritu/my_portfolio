@@ -242,7 +242,7 @@ h6 {
 
 .main-btn {
   background-color: black;
-  color: #fff;
+  color: #fff !important;
   border-color: transparent;
 }
 
@@ -253,7 +253,7 @@ h6 {
 
 .main-btn:hover {
   background-color: transparent;
-  color: #000;
+  color: #000 !important;
   border-color: red;
 }
 

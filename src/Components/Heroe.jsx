@@ -32,7 +32,7 @@ const Heroe = () => {
 
   window.addEventListener("scroll", function () {
     const activeHeader = document.querySelector("#heroe-navbar");
-    activeHeader?.classList.toggle("active-header", window.scrollY > 800);
+    activeHeader?.classList.toggle("active-header", window.scrollY > 500);
   });
 
   const [showLinks, setShowLinks] = useState(false);
@@ -80,10 +80,10 @@ const Heroe = () => {
               </li>
             </ul>
           </div>
-          <button className='main-btn'>
+          <a href='tel:+254740924507' className='btn main-btn'>
             <TapAndPlayIcon />
             {""} Hire Me
-          </button>
+          </a>
           <div className='menu-icon' onClick={toggleLinks}>
             {showLinks ? <CloseIcon /> : <MenuIcon />}
           </div>
@@ -100,10 +100,10 @@ const Heroe = () => {
               to make meaningful contributions through cutting-edge technology.
             </p>
             <div className='heroe-btn-cont'>
-              <button className='main-btn'>
+              <a href='tel:+254740924507' className='btn main-btn'>
                 <TapAndPlayIcon />
                 {""} Hire Me
-              </button>
+              </a>
               <button className='main-btn-1' onClick={downloadCV}>
                 Download CV <DownloadIcon />
               </button>
