@@ -1,0 +1,22 @@
+.article-card{
+    background-color: #ffffff;
+    min-height: 280px;
+}
+
+.article-card img{
+    height: 150px;
+    width: 100%;
+    object-fit: cover !important;
+}
+
+.article-title{
+    font-size: 16px;
+    padding-top: 10px;
+    font-weight: 300;
+}
+
+.read-more, .view-more-medium{
+    text-decoration: none;
+    color: unset;
+    text-align: center;
+}
