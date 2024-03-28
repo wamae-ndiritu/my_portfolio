@@ -6,7 +6,10 @@ const ArticleCard = ({article}) => {
       <a href={link} target='_blank' rel='noopener noreferrer'>
         <img src={imageUrl} alt={title} className='img-fluid' />
       </a>
-      <h3 className='article-title'>{title}</h3>
+      <h3
+        className='article-title'
+        dangerouslySetInnerHTML={{ __html: title }}
+      ></h3>
       <p className='article-description'>{overview}</p>
       <a
         href={link}

@@ -16,7 +16,6 @@ const ArticlesSection = () => {
     const htmlContent = article.description;
     const parser = new DOMParser();
     const doc = parser.parseFromString(htmlContent, "text/html");
-
     // Extract image URL
     const imageElement = doc.querySelector("img");
     const imageUrl = imageElement ? imageElement.getAttribute("src") : null;
