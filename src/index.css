@@ -371,6 +371,13 @@ h6 {
   padding: 10px 20px;
 }
 
+.story-title{
+  font-size: 16px;
+  padding: 10px 0;
+  font-style: italic;
+  font-weight: 300;
+  text-align: center;
+}
 .about-story .h5,
 .about-bio .title-h5,
 .title-h5 {
@@ -393,29 +400,23 @@ h6 {
 }
 
 .skill-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #fff;
-  height: 150px;
-  border-radius: 10px;
+  padding: 0 !important;
 }
 
-.skill-card .skill {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
+.skill {
+  width: 70px;
+  height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 18px;
+  background-color: white;
+  margin: 2px;
 }
 
 .skill img {
   width: 100%;
   height: 100%;
-  border-radius: 50%;
   object-fit: contain;
 }
 
@@ -516,6 +517,10 @@ h6 {
 
 /* --------------Location---------------- */
 
+.mobile-skills{
+  display: none;
+}
+
 @media (max-width: 768px) {
   .heroe-center .h1 {
     font-size: 24px;
@@ -534,8 +539,20 @@ h6 {
     height: 200px;
   }
 
+  .about-info{
+    gap: 0;
+  }
+
   .about-left{
     flex: 100%;
+  }
+
+  .desktop-skills{
+    display: none;
+  }
+
+  .mobile-skills{
+    display: block;
   }
 }
 
@@ -686,8 +703,9 @@ h6 {
     margin-top: 20px;
   }
 
-  .skills {
-    margin: 20px 20px;
+  .skill{
+    width: 80px;
+    height: 80px;
   }
 
   .location-row {

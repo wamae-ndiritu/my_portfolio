@@ -36,12 +36,12 @@ const SkillCard = (props) => {
         <img src={img} alt={title} />
       </div>
       <h5 className="h5">{title}</h5>
-      <BarWrapper>
+      {/* <BarWrapper>
         <CompetencyBar color={color} competency={competency}>
           {competency}%
         </CompetencyBar>
         <RemainingBar competency={competency} />
-      </BarWrapper>
+      </BarWrapper> */}
     </div>
   );
 };

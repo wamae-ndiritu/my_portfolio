@@ -36,9 +36,8 @@ const ArticlesSection = () => {
         <div className='hr'></div>
       </div>
       <p>
-        As part of sharing my knowledge, I write techinal articles that explain
-        various concepts across the tech world. It is through sharing. that one
-        can demonstrate that they truly understand it. “If you can&lsquo;t
+        As part of sharing my knowledge, I write techinal articles explaining various concepts across the tech world. It is through sharing, that one
+        can demonstrate that they truly understand something. “If you can&lsquo;t
         explain something in simple terms, you don&lsquo;t understand it.”
         Richard Feynman
       </p>

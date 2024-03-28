@@ -48,4 +48,39 @@ export const skills = [
     competency: 78,
     color: "teal",
   },
+  {
+    id: 7,
+    title: "Python",
+    img: "/Assets/Images/python.png",
+  },
+  {
+    id: 8,
+    title: "Django",
+    img: "/Assets/Images/django.png",
+  },
+  {
+    id: 9,
+    title: "Flask",
+    img: "/Assets/Images/flask.png",
+  },
+  {
+    id: 10,
+    title: "MySQL",
+    img: "/Assets/Images/mysql.png",
+  },
+  {
+    id: 11,
+    title: "C",
+    img: "/Assets/Images/C.png",
+  },
+  {
+    id: 12,
+    title: "Java",
+    img: "/Assets/Images/java.png",
+  },
+  {
+    id: 13,
+    title: "Linux",
+    img: "/Assets/Images/linux.png",
+  },
 ];
