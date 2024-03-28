@@ -4,7 +4,7 @@
     "title": "Bitnine Homepage Clone",
     "url": "https://bitnine-clone-react.netlify.app/",
     "category": "website",
-    "image": "./assets/bitnine.png",
+    "image": "/assets/bitnine.png",
     "technologies": ["React JS"]
   },
   {
@@ -12,7 +12,7 @@
     "title": "My Purpose Story",
     "url": "https://mps.emmanuelmango.com/",
     "category": "app",
-    "image": "./assets/mps.png",
+    "image": "/assets/mps.png",
     "technologies": ["React JS", "Tailwind", "Node JS", "express.js", "Mongo DB"]
   },
   {
@@ -20,7 +20,7 @@
     "title": "Rich Paints",
     "url": "https://richpaints.co.ke/",
     "category": "website",
-    "image": "./assets/richpaints.png",
+    "image": "/assets/richpaints.png",
     "technologies": ["React JS", "Bootstrap"]
   },
   {
@@ -28,7 +28,7 @@
     "title": "Kibandaski Management System",
     "url": "http://kibandaski.nelitetech.com/",
     "category": "app",
-    "image": "./assets/kibandaski.png",
+    "image": "/assets/kibandaski.png",
     "technologies": ["React JS", "Redux", "Tailwind", "Django", "PostgreSQl", "Web Sockets"]
   },
   {
@@ -36,7 +36,7 @@
     "title": "Shangilia Ecommerce",
     "url": "https://shangilia.netlify.app/",
     "category": "app",
-    "image": "./assets/shangilia.png",
+    "image": "/assets/shangilia.png",
     "technologies": ["React JS", "Redux", "Bootstrap", "Node JS", "express.js", "Node JS"] 
   },
   {
@@ -44,7 +44,7 @@
     "title": "Purpose Clarity Tool",
     "url": "https://pct.emmanuelmango.com/",
     "category": "app",
-    "image": "./assets/pct.png",
+    "image": "/assets/pct.png",
     "technologies": ["React JS", "Tailwind", "Node JS", "express.js", "Mongo DB"]
   },
   {
@@ -52,7 +52,7 @@
     "title": "Photographer Portfolio",
     "url": "https://wanderi-photography.netlify.app/",
     "category": "website",
-    "image": "./assets/photographer-portfolio.png",
+    "image": "/assets/photographer-portfolio.png",
     "technologies": [
       "HTML",
       "CSS",
@@ -64,7 +64,7 @@
     "title": "Nutritionist Portolio",
     "url": "https://nutritionist-portfolio.vercel.app/",
     "category": "website",
-    "image": "./assets/nutritionist-portfolio.png",
+    "image": "/assets/nutritionist-portfolio.png",
     "technologies": [
       "HTML",
       "Bootstrap",
@@ -77,7 +77,7 @@
     "title": "Chamaa Management System",
     "url": "https://chamaa-sacco.netlify.app/",
     "category": "app",
-    "image": "./assets/chamaa.png",
+    "image": "/assets/chamaa.png",
     "technologies": [
       "React JS",
       "Bootstrap",
@@ -91,7 +91,7 @@
     "title": "Validation Form with JavaScript",
     "url": "https://validate-form-with-js.netlify.app/",
     "category": "features",
-    "image": "./assets/form.png",
+    "image": "/assets/form.png",
     "technologies": [
       "HTML",
       "CSS",
@@ -103,7 +103,7 @@
     "title": "Rozzette Fashion Store",
     "url": "https://rozzette.netlify.app/",
     "category": "app",
-    "image": "./assets/rozzette.png",
+    "image": "/assets/rozzette.png",
     "technologies": [
       "React JS",
       "Bootstrap"
@@ -114,7 +114,7 @@
     "title": "Nice Mounts",
     "url": "https://nice-mount.netlify.app/",
     "category": "app",
-    "image": "./assets/nicemounts.png",
+    "image": "/assets/nicemounts.png",
     "technologies": [
       "React JS",
       "Bootstrap",

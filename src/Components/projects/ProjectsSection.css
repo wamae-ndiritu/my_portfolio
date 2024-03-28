@@ -1,0 +1,84 @@
+.project-section .padding-medium{
+    padding: 10px !important;
+}
+
+.project-item {
+    background-color: #ffffff;
+    position: relative;
+}
+
+.project-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    color: #ffffffcc;
+    position: absolute;
+    top: 50%;
+    /* Initially set to center vertically */
+    left: 50%;
+    right: 50%;
+    bottom: 50%;
+    /* Initially set to center horizontally */
+    transform: translate(-50%, -50%) scale(0);
+    /* Scale down initially */
+    opacity: 0;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    /* Transition for transform and opacity */
+}
+
+.project-item:hover .project-info {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    /* Scale up when hovering */
+}
+
+/* Keyframe animation for initial appearance */
+@keyframes appear {
+    0% {
+        transform: translate(50%, 50%) scale(0);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translate(50%, 50%) scale(1.2);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+}
+
+.project-info.animated-appear {
+    animation: appear 0.5s ease-in-out;
+    /* Apply animation */
+}
+
+.project-info h3{
+    font-size: 20px;
+}
+
+.project-info p{
+    text-align: center;
+}
+
+.btn-view{
+    background-color: red;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+}
+
+.btn-view:hover{
+    background-color: #ffffff;
+    color: #000;
+    border-color: red;
+}
