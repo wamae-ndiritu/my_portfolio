@@ -60,7 +60,7 @@ const Heroe = () => {
         </div>
         <ul
           className={`absolute md:static md:flex md:items-center md:space-x-2 top-16 left-0 w-full bg-opacity-60  md:w-auto shadow-md md:shadow-none transition-all duration-300 ${
-            menuOpen ? "block" : "hidden"
+            menuOpen ? "block bg-black text-primary" : "hidden"
           }`}
         >
           {["About Me", "Services", "Projects", "Blogs", "Contacts"].map(
@@ -68,6 +68,7 @@ const Heroe = () => {
               <li
                 key={index}
                 className='py-2 px-4 text-center md:py-0 hover:text-gray-300 text-white'
+                onClick={() => setMenuOpen(false)}
               >
                 <a href={`#${item.toLowerCase().replace(" ", "")}`}>{item}</a>
               </li>
@@ -154,21 +155,30 @@ const Heroe = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
-          {[FaGithub, FaFacebook, FaTwitter, FaLinkedin, FaWhatsapp].map(
-            (Icon, index) => (
-              <motion.a
-                key={index}
-                href='#'
-                className={`text-gray-800 bg-transparent border border-primary p-2 rounded-full ${
-                  scrolled ? "text-primary" : "text-white"
-                }`}
-                whileHover={{ scale: 1.2, backgroundColor: "#0056b3" }}
-                whileTap={{ scale: 0.9 }}
-              >
-                <Icon size={24} />
-              </motion.a>
-            )
-          )}
+          {[
+            { Icon: FaGithub, link: "https://github.com/wamae-ndiritu" },
+            { Icon: FaFacebook, link: "https://facebook.com/wamaendiritu" },
+            { Icon: FaTwitter, link: "https://x.com/wamai_wa" },
+            {
+              Icon: FaLinkedin,
+              link: "https://www.linkedin.com/in/wamae-ndiritu-54b38124b/",
+            },
+            { Icon: FaWhatsapp, link: "https://wa.me/254740924507" },
+          ].map(({ Icon, link }, index) => (
+            <motion.a
+              key={index}
+              href={link}
+              target='_blank'
+              rel='noopener noreferrer'
+              className={`text-gray-800 bg-transparent border border-primary p-2 rounded-full ${
+                scrolled ? "text-primary" : "text-white"
+              }`}
+              whileHover={{ scale: 1.2, backgroundColor: "#0056b3" }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <Icon size={24} />
+            </motion.a>
+          ))}
         </motion.div>
       </section>
     </div>

@@ -44,7 +44,6 @@
     "url": "https://richpaints.co.ke/",
     "category": "website",
     "images": [
-      "/assets/richpaints.png",
       "/assets/richpaints-1.png",
       "/assets/richpaints-2.png",
       "/assets/richpaints-3.png",
@@ -141,7 +140,7 @@
     "title": "Chamaa Management System",
     "url": ["https://chamaa-sacco.netlify.app/"],
     "category": "app",
-    "images": "/assets/chamaa.png",
+    "images": ["/assets/chamaa.png"],
     "technologies": ["React JS", "Bootstrap", "Node JS", "express.js", "MYSQL"],
     "type": "web_app",
     "description": "This is a management system aimed to help small social groups; chamaa manage their operations such as collecting members contributions etc."
