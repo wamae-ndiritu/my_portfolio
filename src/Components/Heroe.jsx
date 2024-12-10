@@ -1,199 +1,186 @@
-import { useState, useRef, useEffect } from "react";
-import MenuIcon from "@mui/icons-material/Menu";
-import CloseIcon from "@mui/icons-material/Close";
-import DownloadIcon from "@mui/icons-material/Download";
-import TapAndPlayIcon from "@mui/icons-material/TapAndPlay";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import { useState, useEffect } from "react";
+import {
+  FaBars,
+  FaTimes,
+  FaDownload,
+  FaGithub,
+  FaFacebook,
+  FaTwitter,
+  FaLinkedin,
+  FaWhatsapp,
+} from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const Heroe = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
   const downloadCV = () => {
-    // using Java Script method to get PDF file
-    fetch("/Assets/docs/Ndiritu_Wamae_CV.pdf").then((response) => {
+    fetch("/docs/Wamae-Ndiritu-Resume.pdf").then((response) => {
       response.blob().then((blob) => {
-        // Creating new object of PDF file
         const fileURL = window.URL.createObjectURL(blob);
-        // Setting various property values
-        let alink = document.createElement("a");
-        alink.href = fileURL;
-        alink.download = "/Assets/docs/Ndiritu_Wamae_CV.pdf";
-        alink.click();
+        const link = document.createElement("a");
+        link.href = fileURL;
+        link.download = "Wamae Ndiritu.pdf";
+        link.click();
       });
     });
   };
 
-  window.addEventListener("scroll", function () {
-    const socialIcons = document.querySelector("#social-block");
-    socialIcons?.classList.toggle("fixed-social-block", window.scrollY > 600);
-  });
-
-  window.addEventListener("scroll", function () {
-    const activeHeader = document.querySelector("#heroe-navbar");
-    activeHeader?.classList.toggle("active-header", window.scrollY > 500);
-  });
-
-  const [showLinks, setShowLinks] = useState(false);
-  const linksContainerRef = useRef(null);
-  const linksRef = useRef(null);
-
-  const toggleLinks = () => {
-    setShowLinks(!showLinks);
-  };
+  // Detect scroll height
   useEffect(() => {
-    let linksHeight = linksRef.current.getBoundingClientRect().height;
-    linksHeight += 200;
-    if (showLinks) {
-      linksContainerRef.current.style.height = `${linksHeight}px`;
-    } else {
-      linksContainerRef.current.style.height = "0px";
-    }
-  }, [showLinks]);
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 200);
+    };
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <div className='heroe-section' id='heroe-section home'>
-      <div className='heroe-wrapper'>
-        <div className='heroe-navbar' id='heroe-navbar'>
-          <div className='navbar-left'>
-            <h3>
-              <a href='#home'>Wamae Dev</a>
-            </h3>
-          </div>
-          <div className='navbar-right' ref={linksContainerRef}>
-            <ul className='nav-links' ref={linksRef}>
-              <li>
-                <a href='/#about'>About Me</a>
-              </li>
-              <li>
-                <a href='#services'>Services</a>
-              </li>
-              <li>
-                <a href='#projects'>Projects</a>
-              </li>
-              <li>
-                <a href='#blogs'>Blogs</a>
-              </li>
-              <li>
-                <a href='#contacts'>Contacts</a>
-              </li>
-            </ul>
-          </div>
-          <a href='tel:+254740924507' className='btn main-btn header-btn'>
-            <TapAndPlayIcon />
-            {""} <span>Hire Me</span>
+    <div className='relative bg-gray-100 text-gray-800'>
+      {/* Navbar */}
+      <nav
+        className='fixed top-0 left-0 w-full bg-opacity-60 backdrop-blur-lg z-50 flex items-center justify-between px-6 py-3'
+        style={{ backgroundColor: "rgba(0, 0, 0, 0.6)" }} // Adjust to match video tone
+      >
+        <h3 className='text-xl font-bold text-white'>
+          <a href='#home' className='hover:text-gray-300'>
+            Wamae Dev
           </a>
-          <div className='menu-icon' onClick={toggleLinks}>
-            {showLinks ? <CloseIcon /> : <MenuIcon />}
-          </div>
+        </h3>
+        <div className='md:hidden' onClick={() => setMenuOpen(!menuOpen)}>
+          {menuOpen ? (
+            <FaTimes size={24} className='text-white' />
+          ) : (
+            <FaBars size={24} className='text-white' />
+          )}
         </div>
-        <div className='heroe-center'>
-          <div className='heroe-info'>
-            <h4>Wamae Ndiritu | Software Engineer</h4>
-            <p>
-              Hi, I&apos;m a dedicated Software Engineer passionate about making
-              a positive impact in the tech world and beyond. I love solving
-              real-world problems with innovative solutions, using my
-              programming skills to create practical applications. I&apos;m
-              constantly adapting to the fast-paced tech environment and strive
-              to make meaningful contributions through cutting-edge technology.
+        <ul
+          className={`absolute md:static md:flex md:items-center md:space-x-2 top-16 left-0 w-full bg-opacity-60  md:w-auto shadow-md md:shadow-none transition-all duration-300 ${
+            menuOpen ? "block bg-black text-primary" : "hidden"
+          }`}
+        >
+          {["About Me", "Services", "Projects", "Blogs", "Contacts"].map(
+            (item, index) => (
+              <li
+                key={index}
+                className='py-2 px-4 text-center md:py-0 hover:text-gray-300 text-white'
+                onClick={() => setMenuOpen(false)}
+              >
+                <a href={`#${item.toLowerCase().replace(" ", "")}`}>{item}</a>
+              </li>
+            )
+          )}
+        </ul>
+        <a
+          href='tel:+254740924507'
+          className='hidden md:inline-block px-4 py-2 bg-white text-primary rounded-md hover:bg-gray-200'
+        >
+          Hire Me
+        </a>
+      </nav>
+
+      {/* Hero Section */}
+      <section className='relative flex items-center justify-center min-h-screen'>
+        {/* Video Background */}
+        <video
+          autoPlay
+          loop
+          muted
+          className='absolute inset-0 w-full h-full object-cover'
+          src='/videos/coding.mp4'
+        ></video>
+        {/* Overlay Content */}
+        <div className='absolute inset-0 bg-black bg-opacity-50'></div>{" "}
+        {/* Semi-transparent overlay */}
+        <div className='relative z-10 flex flex-col md:flex-row items-center justify-center px-6'>
+          <div className='md:w-1/2 text-center md:text-left space-y-4'>
+            <motion.h1
+              className='text-2xl md:text-4xl font-bold text-white'
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1 }}
+            >
+              Wamae Ndiritu | Software Engineer
+            </motion.h1>
+            <p className='text-gray-200'>
+              Hi, I&apos;m a dedicated Software Engineer passionate about
+              solving real-world problems through innovative solutions.
             </p>
-            <div className='heroe-btn-cont'>
-              <a href='tel:+254740924507' className='btn main-btn'>
-                <TapAndPlayIcon />
-                {""} Hire Me
-              </a>
-              <button className='main-btn-1' onClick={downloadCV}>
-                Download CV <DownloadIcon />
-              </button>
+            <div className='flex space-x-4 justify-center'>
+              <motion.button
+                className='px-6 py-2 bg-primary text-white rounded-md flex items-center space-x-2'
+                onClick={downloadCV}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                <FaDownload /> <span>Download CV</span>
+              </motion.button>
+              <motion.a
+                href='tel:+254740924507'
+                className='px-6 py-2 border border-primary text-white rounded-md hover:bg-primary hover:text-white flex items-center space-x-2'
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                <span>Hire Me</span>
+              </motion.a>
             </div>
           </div>
-          <div className='heroe-profile-cont'>
-            <div className='heroe-profile'>
-              <img src='/Assets/Images/potrait.png' alt='' />
+          <div className='md:w-1/2 flex justify-center mt-6 md:mt-0'>
+            <div className='relative'>
+              <motion.img
+                src='/Assets/Images/potrait.png'
+                alt='Portrait'
+                className='w-72 h-72 object-cover rounded-full shadow-lg'
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ duration: 1 }}
+              />
+              {/* Circular Overlay */}
+              <div className='absolute inset-0 rounded-full border-4 border-primary'></div>
             </div>
           </div>
         </div>
-        <div className='heroe-socials'>
-          <div className='heroe-icon'>
-            <a
-              href='https://github.com/wamae-ndiritu'
+        {/* Social Links */}
+        <motion.div
+          className={`fixed ${
+            scrolled
+              ? "right-4 top-1/2 transform -translate-y-1/2 flex flex-col space-y-4"
+              : "bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-4"
+          }`}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          {[
+            { Icon: FaGithub, link: "https://github.com/wamae-ndiritu" },
+            { Icon: FaFacebook, link: "https://facebook.com/wamaendiritu" },
+            { Icon: FaTwitter, link: "https://x.com/wamai_wa" },
+            {
+              Icon: FaLinkedin,
+              link: "https://www.linkedin.com/in/wamae-ndiritu-54b38124b/",
+            },
+            { Icon: FaWhatsapp, link: "https://wa.me/254740924507" },
+          ].map(({ Icon, link }, index) => (
+            <motion.a
+              key={index}
+              href={link}
               target='_blank'
-              rel='noreferrer'
+              rel='noopener noreferrer'
+              className={`text-gray-800 bg-transparent border border-primary p-2 rounded-full ${
+                scrolled ? "text-primary" : "text-white"
+              }`}
+              whileHover={{ scale: 1.2, backgroundColor: "#0056b3" }}
+              whileTap={{ scale: 0.9 }}
             >
-              <GitHubIcon />
-            </a>
-          </div>
-          <div className='heroe-icon'>
-            <a
-              href='https://twitter.com/wamai_wa'
-              target='_blank'
-              rel='noreferrer'
-            >
-              <TwitterIcon />
-            </a>
-          </div>
-          <div className='heroe-icon'>
-            <a
-              href='https://www.facebook.com/wamaendiritu'
-              target='_blank'
-              rel='noreferrer'
-            >
-              <FacebookRoundedIcon />
-            </a>
-          </div>
-        </div>
-        <div className='socials-block' id='social-block'>
-          <div className='social-icon'>
-            <a
-              href='https://github.com/wamae-ndiritu'
-              target='_blank'
-              rel='noreferrer'
-              style={{ color: "#000" }}
-            >
-              <GitHubIcon />
-            </a>
-          </div>
-          <div className='social-icon'>
-            <a
-              href='https://www.facebook.com/wamaendiritu'
-              target='_blank'
-              rel='noreferrer'
-            >
-              <FacebookRoundedIcon />
-            </a>
-          </div>
-          <div className='social-icon'>
-            <a
-              href='https://twitter.com/wamai_wa'
-              target='_blank'
-              rel='noreferrer'
-            >
-              <TwitterIcon />
-            </a>
-          </div>
-          <div className='social-icon'>
-            <a
-              href='https://www.linkedin.com/in/wamae-ndiritu-54b38124b/'
-              target='_blank'
-              rel='noreferrer'
-            >
-              <LinkedInIcon />
-            </a>
-          </div>
-          <div className='social-icon'>
-            <a
-              href='https://www.linkedin.com/in/wamae-ndiritu-54b38124b/'
-              target='_blank'
-              rel='noreferrer'
-              style={{ color: "green" }}
-            >
-              <WhatsAppIcon />
-            </a>
-          </div>
-        </div>
-      </div>
+              <Icon size={24} />
+            </motion.a>
+          ))}
+        </motion.div>
+      </section>
     </div>
   );
 };

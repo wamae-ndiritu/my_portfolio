@@ -7,6 +7,7 @@ import ProjectSection from "./Components/projects/ProjectSection";
 import ArticlesSection from "./Components/articles/ArticlesSection";
 import { useEffect, useState } from "react";
 import LoadingSpinner from "./loading/LoadingSpinner";
+import Footer from "./Components/Footer";
 
 function App() {
     const [isLoading, setIsLoading] = useState(true);
@@ -30,6 +31,7 @@ function App() {
           <ProjectSection />
           <ArticlesSection />
           <Location />
+          <Footer />
         </div>
       )}
     </>

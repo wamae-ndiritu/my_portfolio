@@ -82,3 +82,122 @@
     color: #000;
     border-color: red;
 }
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal Content */
+.modal-content {
+  background: var(--theme-background-color, #fff);
+  color: var(--theme-text-color, #333);
+  border-radius: 10px;
+  max-width: 800px;
+  width: 90%;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Modal Header */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.modal-header h3 {
+  margin: 0;
+  color: var(--theme-primary-color, #007bff);
+}
+
+.modal-header .close-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--theme-primary-color, #007bff);
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.modal-header .close-btn:hover {
+  color: var(--theme-danger-color, #ff0000);
+}
+
+/* Modal Body */
+.modal-body {
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.modal-body img {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+/* Project Details */
+.modal-body h4 {
+  margin: 10px 0;
+  font-size: 1.2rem;
+  color: var(--theme-secondary-color, #555);
+}
+
+.modal-body p {
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+/* Buttons */
+.btn-demo,
+.btn-source {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #fff;
+  background: var(--theme-primary-color, #007bff);
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+  transition: background 0.3s ease;
+}
+
+.btn-demo:hover,
+.btn-source:hover {
+  background: var(--theme-hover-color, #0056b3);
+}
+
+.btn-source {
+  background: var(--theme-secondary-color, #6c757d);
+}
+
+.btn-source:hover {
+  background: var(--theme-secondary-hover-color, #5a6268);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
