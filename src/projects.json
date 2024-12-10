@@ -1,126 +1,200 @@
 [
   {
+    "id": 14,
+    "title": "The Life of Mzee Ngariuku Wa Matu",
+    "description": "This website was built to pay last respect to my GrandPa who died on September 2024 at the age of 98 years. I couldn't celebrate him better than having a website during his burial. May his soul Rest In Peace.",
+    "url": "https://ngariukuwamatu.netlify.app/",
+    "type": "website",
+    "images": ["/assets/guka-1.png", "/assets/guka-2.png"],
+    "technologies": ["React JS", "Tailwind"]
+  },
+  {
     "id": 1,
     "title": "Bitnine Homepage Clone",
     "url": "https://bitnine-clone-react.netlify.app/",
     "category": "website",
-    "image": "/assets/bitnine.png",
-    "technologies": ["React JS"]
+    "images": [
+      "/assets/bitnine.png",
+      "/assets/bitnine-1.png",
+      "/assets/bitnine-2.png"
+    ],
+    "technologies": ["React JS"],
+    "type": "website",
+    "description": "This webpage is a clone of the official Bitnine Homepage. This was done as internship application interview."
   },
   {
     "id": 2,
     "title": "My Purpose Story",
     "url": "https://mps.emmanuelmango.com/",
     "category": "app",
-    "image": "/assets/mps.png",
-    "technologies": ["React JS", "Tailwind", "Node JS", "express.js", "Mongo DB"]
+    "images": ["/assets/mps.png"],
+    "technologies": [
+      "React JS",
+      "Tailwind",
+      "Node JS",
+      "express.js",
+      "Mongo DB"
+    ],
+    "type": "web_app",
+    "description": "This tool is a sibling to Purpose Clarity Tool. It aims at helping individuals realize their purpose in life. This has been sponsored by the book The Good Success by Dr. Emmanuel Mango."
   },
   {
     "id": 3,
     "title": "Rich Paints",
     "url": "https://richpaints.co.ke/",
     "category": "website",
-    "image": "/assets/richpaints.png",
-    "technologies": ["React JS", "Bootstrap"]
+    "images": [
+      "/assets/richpaints.png",
+      "/assets/richpaints-1.png",
+      "/assets/richpaints-2.png",
+      "/assets/richpaints-3.png",
+      "/assets/richpaints-4.png"
+    ],
+    "technologies": ["React JS", "Bootstrap"],
+    "type": "website",
+    "description": "Rich Paints is one of the leading Paints Companies in  Kenya. This is the informational website for Rich Paints."
   },
   {
     "id": 4,
     "title": "Kibandaski Management System",
-    "url": "http://kibandaski.nelitetech.com/",
-    "category": "app",
-    "image": "/assets/kibandaski.png",
-    "technologies": ["React JS", "Redux", "Tailwind", "Django", "PostgreSQl", "Web Sockets"]
+    "url": "https://kibandaski-management-system.netlify.app",
+    "category": "web_app",
+    "images": [
+      "/assets/kibandaski.png",
+      "/assets/kibandaski-1.png",
+      "/assets/kibandaski-2.png",
+      "/assets/kibandaski-3.png",
+      "/assets/kibandaski-4.png",
+      "/assets/kibandaski-5.png",
+      "/assets/kibandaski-6.png"
+    ],
+    "technologies": [
+      "React JS",
+      "Redux",
+      "Tailwind",
+      "Django",
+      "PostgreSQl",
+      "Web Sockets"
+    ],
+    "description": "A system to help small restaurants; Kibandaski to manage their business. The app improves order taking by implementing QR Codes placed at eached table that open an online menu. The customer can order online while at their respective seats and order reaches kitchen without calling the waiter. Additionally, the app is able to collect Mpesa payment both initiated from the system (online) and offline payments.",
+    "type": "web_app"
   },
   {
     "id": 5,
     "title": "Shangilia Ecommerce",
     "url": "https://shangilia.netlify.app/",
     "category": "app",
-    "image": "/assets/shangilia.png",
-    "technologies": ["React JS", "Redux", "Bootstrap", "Node JS", "express.js", "Node JS"] 
+    "images": [
+      "/assets/shangilia.png",
+      "/assets/shangilia-2.png",
+      "/assets/shangilia-2.png"
+    ],
+    "technologies": [
+      "React JS",
+      "Redux",
+      "Bootstrap",
+      "Node JS",
+      "express.js",
+      "Node JS"
+    ],
+    "type": "web_app",
+    "description": "This is a ecommerce shop where customers can shop online. The admin has a dashboard for managing products, orders, transactions, customers etc. This app was one of the earliest projects I need when learning Fullstack web development."
   },
   {
     "id": 6,
     "title": "Purpose Clarity Tool",
     "url": "https://pct.emmanuelmango.com/",
     "category": "app",
-    "image": "/assets/pct.png",
-    "technologies": ["React JS", "Tailwind", "Node JS", "express.js", "Mongo DB"]
+    "images": ["/assets/pct.png"],
+    "technologies": [
+      "React JS",
+      "Tailwind",
+      "Node JS",
+      "express.js",
+      "Mongo DB"
+    ],
+    "type": "web_app",
+    "description": "A tool to help users craft their purpose on earth. By answering a couple of questions, the tool helps understand your purpose better. This tool is sponsored by the book The Good Success by Dr. Emmanuel Mango."
   },
   {
     "id": 7,
     "title": "Photographer Portfolio",
     "url": "https://wanderi-photography.netlify.app/",
     "category": "website",
-    "image": "/assets/photographer-portfolio.png",
-    "technologies": [
-      "HTML",
-      "CSS",
-      "JavaScript"
-    ]
+    "images": ["/assets/photographer-portfolio.png"],
+    "technologies": ["HTML", "CSS", "JavaScript"],
+    "type": "website",
+    "description": "A portfolio website for photographers."
   },
   {
     "id": 8,
     "title": "Nutritionist Portolio",
     "url": "https://nutritionist-portfolio.vercel.app/",
     "category": "website",
-    "image": "/assets/nutritionist-portfolio.png",
-    "technologies": [
-      "HTML",
-      "Bootstrap",
-      "JavaScript",
-      "Django"
-    ]
+    "images": ["/assets/nutritionist-portfolio.png"],
+    "technologies": ["HTML", "Bootstrap", "JavaScript", "Django"],
+    "type": "website",
+    "description": "A portfolio website for nutritionists."
   },
   {
     "id": 9,
     "title": "Chamaa Management System",
-    "url": "https://chamaa-sacco.netlify.app/",
+    "url": ["https://chamaa-sacco.netlify.app/"],
     "category": "app",
-    "image": "/assets/chamaa.png",
-    "technologies": [
-      "React JS",
-      "Bootstrap",
-      "Node JS",
-      "express.js",
-      "MYSQL"
-    ]
+    "images": "/assets/chamaa.png",
+    "technologies": ["React JS", "Bootstrap", "Node JS", "express.js", "MYSQL"],
+    "type": "web_app",
+    "description": "This is a management system aimed to help small social groups; chamaa manage their operations such as collecting members contributions etc."
   },
   {
     "id": 10,
     "title": "Validation Form with JavaScript",
     "url": "https://validate-form-with-js.netlify.app/",
     "category": "features",
-    "image": "/assets/form.png",
-    "technologies": [
-      "HTML",
-      "CSS",
-      "JavaScript"
-    ]
+    "images": ["/assets/form.png"],
+    "technologies": ["HTML", "CSS", "JavaScript"],
+    "type": "website",
+    "description": "A simple project aimed at using JavaScript to add form validations."
   },
   {
     "id": 11,
     "title": "Rozzette Fashion Store",
     "url": "https://rozzette.netlify.app/",
     "category": "app",
-    "image": "/assets/rozzette.png",
-    "technologies": [
-      "React JS",
-      "Bootstrap"
-    ]
+    "images": ["/assets/rozzette.png"],
+    "technologies": ["React JS", "Bootstrap"],
+    "type": "web_app",
+    "description": "An ecommerce store."
   },
   {
     "id": 12,
     "title": "Nice Mounts",
     "url": "https://nice-mount.netlify.app/",
     "category": "app",
-    "image": "/assets/nicemounts.png",
+    "images": ["/assets/nicemounts.png"],
     "technologies": [
       "React JS",
       "Bootstrap",
       "Node JS",
       "express.js",
       "Mongo DB"
-    ]
+    ],
+    "type": "website",
+    "description": "A website for photo mount studios."
+  },
+  {
+    "id": 13,
+    "title": "Timiza Logistics App",
+    "url": "",
+    "images": [
+      "/assets/timiza.jpeg",
+      "/assets/timiza-1.jpeg",
+      "/assets/timiza-2.jpeg",
+      "/assets/timiza-3.jpeg",
+      "/assets/timiza-4.jpeg"
+    ],
+    "type": "mobile_app",
+    "description": "A mobile app for a Logistics company.",
+    "technologies": ["React Native", "Node JS", "Mongo DB"]
   }
 ]
