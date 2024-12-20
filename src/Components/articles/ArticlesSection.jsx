@@ -8,8 +8,19 @@ const ArticlesSection = () => {
     fetch(
       "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@wamae-ndiritu"
     )
-      .then((res) => res.json())
-      .then((data) => setArticles(data.items));
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        if (data.status === 'ok') {
+          setArticles(data.items);
+        } else {
+          console.error('Error fetching articles');
+        }
+      })
+      .catch((error) => {
+        console.error('Fetch error:', error);
+      });
   }, []);
 
   function extractInfo(article) {
