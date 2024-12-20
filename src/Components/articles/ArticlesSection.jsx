@@ -53,7 +53,7 @@ const ArticlesSection = () => {
         </em>
       </p>
       <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4'>
-        {articles.slice(0, 7).map((article, index) => {
+        {articles?.slice(0, 7).map((article, index) => {
           const { imageUrl, overview } = extractInfo(article);
           return (
             <motion.div
