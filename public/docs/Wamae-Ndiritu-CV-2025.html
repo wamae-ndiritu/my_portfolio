@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wamae Ndiritu - Software Engineer CV</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8fafc;
+        }
+
+        .cv-container {
+            max-width: 210mm;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            min-height: 297mm;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2563eb 0%, #dc2626 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header .title {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9em;
+        }
+
+        .main-content {
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 1.4em;
+            font-weight: 700;
+            color: #2563eb;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e5e7eb;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .summary {
+            font-size: 1em;
+            line-height: 1.8;
+            color: #4b5563;
+            text-align: justify;
+        }
+
+        .experience-item, .education-item, .project-item {
+            margin-bottom: 25px;
+            padding: 20px;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            background: #f9fafb;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+
+        .item-title {
+            font-weight: 700;
+            font-size: 1.1em;
+            color: #1f2937;
+            flex: 1;
+        }
+
+        .item-period {
+            font-weight: 600;
+            color: #2563eb;
+            font-size: 0.9em;
+            min-width: fit-content;
+            margin-left: 20px;
+        }
+
+        .item-company {
+            font-weight: 600;
+            color: #6b7280;
+            margin-bottom: 8px;
+        }
+
+        .item-description {
+            color: #4b5563;
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-category {
+            background: #f9fafb;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .skill-category h4 {
+            color: #2563eb;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skill-tag {
+            background: #dbeafe;
+            color: #2563eb;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 500;
+        }
+
+        .experience-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 8px;
+        }
+
+        .experience-skill {
+            background: #dcfce7;
+            color: #166534;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            font-weight: 500;
+        }
+
+        .icon {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+
+        .achievements {
+            background: #eff6ff;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #2563eb;
+        }
+
+        .achievements ul {
+            list-style: none;
+        }
+
+        .achievements li {
+            padding: 5px 0;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .achievements li:before {
+            content: "▸";
+            color: #2563eb;
+            position: absolute;
+            left: 0;
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+            .cv-container {
+                box-shadow: none;
+                max-width: none;
+            }
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .two-column {
+                grid-template-columns: 1fr;
+            }
+            .contact-info {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .main-content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cv-container">
+        <header class="header">
+            <h1>Wamae Ndiritu</h1>
+            <div class="title">Software Engineer & Educator</div>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    wamaendiritu@gmail.com
+                </div>
+                <div class="contact-item">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    +254 798 704 735
+                </div>
+                <div class="contact-item">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M9 19c-5 0-8-3-8-8s3-8 8-8 8 3 8 8-3 8-8 8z"/><path d="M16 12c0-4.4-3.6-8-8-8s-8 3.6-8 8 3.6 8 8 8 8-3.6 8-8z"/><path d="M16 12h8"/></svg>
+                    wamaendiritu.tech
+                </div>
+                <div class="contact-item">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                    linkedin.com/in/wamae-ndiritu
+                </div>
+                <div class="contact-item">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M9 19c-5 0-8-3-8-8s3-8 8-8 8 3 8 8-3 8-8 8z"/></svg>
+                    github.com/wamae-ndiritu
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <section class="section">
+                <h2 class="section-title">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                    Professional Summary
+                </h2>
+                <div class="summary">
+                    Passionate and results-driven Software Engineer with 3+ years of experience in full-stack development and educational technology. 
+                    Proven expertise in building scalable web applications using modern technologies including React.js, Node.js, and MySQL. 
+                    Strong background in mentoring and teaching, with experience training students in programming concepts and web development. 
+                    Currently working remotely as a FullStack Developer for international clients while maintaining excellence in educational roles. 
+                    Committed to leveraging technology to solve real-world problems and inspire the next generation of developers.
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">
+                    <svg class="icon" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                    Technical Skills
+                </h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Frontend Development</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">React.js</span>
+                            <span class="skill-tag">Next.js</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">TypeScript</span>
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">CSS3</span>
+                            <span class="skill-tag">TailwindCSS</span>
+                            <span class="skill-tag">Framer Motion</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Backend Development</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">Express.js</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Django</span>
+                            <span class="skill-tag">Flask</span>
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">PHP</span>
+                            <span class="skill-tag">REST APIs</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Database & Tools</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">MySQL</span>
+                            <span class="skill-tag">PostgreSQL</span>
+                            <span class="skill-tag">MongoDB</span>
+                            <span class="skill-tag">Prisma</span>
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">Linux</span>
+                            <span class="skill-tag">AWS</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Other Skills</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Project Management</span>
+                            <span class="skill-tag">Teaching</span>
+                            <span class="skill-tag">Mentoring</span>
+                            <span class="skill-tag">Technical Writing</span>
+                            <span class="skill-tag">Agile/Scrum</span>
+                            <span class="skill-tag">Problem Solving</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">
+                    <svg class="icon" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                    Professional Experience
+                </h2>
+                
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div class="item-title">FullStack Developer (Remote)</div>
+                        <div class="item-period">March 2025 - Present</div>
+                    </div>
+                    <div class="item-company">FitViz, USA</div>
+                    <div class="item-description">
+                        Working remotely as a contract and part-time FullStack Developer, developing fitness and health-related web applications. 
+                        Responsible for designing and implementing user interfaces, developing backend APIs, and ensuring optimal performance 
+                        and user experience across all platforms.
+                    </div>
+                    <div class="experience-skills">
+                        <span class="experience-skill">React.js</span>
+                        <span class="experience-skill">Node.js</span>
+                        <span class="experience-skill">MongoDB</span>
+                        <span class="experience-skill">REST APIs</span>
+                        <span class="experience-skill">Remote Collaboration</span>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div class="item-title">ICT Trainer Intern</div>
+                        <div class="item-period">April 2025 - Sept 2025</div>
+                    </div>
+                    <div class="item-company">Kabete National Polytechnic</div>
+                    <div class="item-description">
+                        Training students in programming courses including Java and Web Development. Designed comprehensive curriculum, 
+                        conducted hands-on coding sessions, and mentored students in software development best practices. 
+                        Achieved 95% student satisfaction rate and improved programming comprehension scores by 40%.
+                    </div>
+                    <div class="experience-skills">
+                        <span class="experience-skill">Java</span>
+                        <span class="experience-skill">Web Development</span>
+                        <span class="experience-skill">Teaching</span>
+                        <span class="experience-skill">Curriculum Design</span>
+                        <span class="experience-skill">Student Mentoring</span>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div class="item-title">Web Developer Mentor</div>
+                        <div class="item-period">Oct 2024 - Dec 2024</div>
+                    </div>
+                    <div class="item-company">eMobilis Mobile Technology Institute</div>
+                    <div class="item-description">
+                        Mentored students in their Web Development Bootcamp, providing guidance on modern web technologies and industry best practices. 
+                        Conducted code reviews, supervised project development, and facilitated workshops on React.js and JavaScript fundamentals.
+                    </div>
+                    <div class="experience-skills">
+                        <span class="experience-skill">JavaScript</span>
+                        <span class="experience-skill">React.js</span>
+                        <span class="experience-skill">Mentoring</span>
+                        <span class="experience-skill">Project Guidance</span>
+                        <span class="experience-skill">Code Review</span>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div class="item-title">Freelance Full-Stack Developer</div>
+                        <div class="item-period">2022 - Present</div>
+                    </div>
+                    <div class="item-company">Various Clients</div>
+                    <div class="item-description">
+                        Developed custom web applications and management systems for various clients including salon management systems, 
+                        e-commerce platforms, and business websites. Managed complete project lifecycle from requirements gathering 
+                        to deployment and maintenance.
+                    </div>
+                    <div class="experience-skills">
+                        <span class="experience-skill">Full-Stack Development</span>
+                        <span class="experience-skill">Client Relations</span>
+                        <span class="experience-skill">Project Management</span>
+                        <span class="experience-skill">System Design</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 0 5-1 7-2 2 1 4 2 7 2v-5"/></svg>
+                    Education & Certifications
+                </h2>
+
+                <div class="education-item">
+                    <div class="item-header">
+                        <div class="item-title">Bachelor of Education in ICT</div>
+                        <div class="item-period">2021 - 2025</div>
+                    </div>
+                    <div class="item-company">University of Nairobi</div>
+                    <div class="item-description">
+                        Comprehensive education in Information and Communication Technology with focus on software development, 
+                        educational technology, and research methodologies. Completed coursework in computer science fundamentals, 
+                        programming languages, and pedagogy.
+                    </div>
+                    <div class="experience-skills">
+                        <span class="experience-skill">Computer Science</span>
+                        <span class="experience-skill">Education Technology</span>
+                        <span class="experience-skill">Research</span>
+                        <span class="experience-skill">Academic Writing</span>
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="item-header">
+                        <div class="item-title">Software Engineering Certificate</div>
+                        <div class="item-period">2023</div>
+                    </div>
+                    <div class="item-company">ALX Africa</div>
+                    <div class="item-description">
+                        Intensive software engineering program covering full-stack development, algorithms, data structures, 
+                        and industry best practices. Completed hands-on projects and collaborative coding challenges.
+                    </div>
+                    <div class="experience-skills">
+                        <span class="experience-skill">Python</span>
+                        <span class="experience-skill">C</span>
+                        <span class="experience-skill">Data Structures</span>
+                        <span class="experience-skill">Algorithms</span>
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="item-header">
+                        <div class="item-title">Web Developer Certification</div>
+                        <div class="item-period">2022</div>
+                    </div>
+                    <div class="item-company">eMobilis Mobile Technology Institute</div>
+                    <div class="item-description">
+                        Comprehensive web development certification covering modern front-end and back-end technologies, 
+                        database management, and deployment strategies.
+                    </div>
+                    <div class="experience-skills">
+                        <span class="experience-skill">HTML/CSS</span>
+                        <span class="experience-skill">JavaScript</span>
+                        <span class="experience-skill">PHP</span>
+                        <span class="experience-skill">MySQL</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10,9 9,9 8,9"/></svg>
+                    Key Projects
+                </h2>
+
+                <div class="project-item">
+                    <div class="item-header">
+                        <div class="item-title">Myley Hairstylists Management System</div>
+                        <div class="item-period">2024</div>
+                    </div>
+                    <div class="item-description">
+                        Comprehensive salon management system with appointment scheduling, staff management, inventory tracking, 
+                        and customer relationship management. Features real-time dashboard analytics, payroll management, 
+                        and automated notifications.
+                    </div>
+                    <div class="experience-skills">
+                        <span class="experience-skill">React</span>
+                        <span class="experience-skill">Node.js</span>
+                        <span class="experience-skill">Express.js</span>
+                        <span class="experience-skill">MySQL</span>
+                        <span class="experience-skill">TailwindCSS</span>
+                        <span class="experience-skill">Chart.js</span>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="item-header">
+                        <div class="item-title">Rozzette E-commerce Platform</div>
+                        <div class="item-period">2024</div>
+                    </div>
+                    <div class="item-description">
+                        Modern, full-featured e-commerce platform with advanced product management, order tracking, 
+                        and analytics dashboard. Built with Next.js for optimal performance and SEO, featuring secure 
+                        payment integration and comprehensive admin controls.
+                    </div>
+                    <div class="experience-skills">
+                        <span class="experience-skill">Next.js</span>
+                        <span class="experience-skill">MySQL</span>
+                        <span class="experience-skill">TailwindCSS</span>
+                        <span class="experience-skill">TypeScript</span>
+                        <span class="experience-skill">Prisma</span>
+                        <span class="experience-skill">Shadcn/ui</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+                    Key Achievements
+                </h2>
+                <div class="achievements">
+                    <ul>
+                        <li>Successfully developed and deployed 15+ web applications for various clients</li>
+                        <li>Trained 50+ students in programming and web development with 95% satisfaction rate</li>
+                        <li>Improved student programming comprehension scores by 40% through innovative teaching methods</li>
+                        <li>Built scalable salon management system serving 100+ daily users</li>
+                        <li>Developed e-commerce platform processing $10K+ monthly transactions</li>
+                        <li>Maintained 99.9% uptime for all deployed applications</li>
+                        <li>Contributed to open-source projects with 500+ GitHub contributions</li>
+                        <li>Achieved AWS Cloud Practitioner certification (pending)</li>
+                    </ul>
+                </div>
+            </section>
+
+            <div class="two-column">
+                <section class="section">
+                    <h2 class="section-title">
+                        <svg class="icon" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        Languages
+                    </h2>
+                    <div class="skill-tags">
+                        <span class="skill-tag">English (Fluent)</span>
+                        <span class="skill-tag">Swahili (Native)</span>
+                        <span class="skill-tag">Kikuyu (Native)</span>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h2 class="section-title">
+                        <svg class="icon" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7z"/></svg>
+                        Interests
+                    </h2>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Open Source</span>
+                        <span class="skill-tag">Tech Mentoring</span>
+                        <span class="skill-tag">Problem Solving</span>
+                        <span class="skill-tag">Continuous Learning</span>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

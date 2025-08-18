@@ -123,14 +123,14 @@ const Heroe = () => {
               solving real-world problems through innovative solutions.
             </p>
             <div className='flex space-x-4 justify-center'>
-              <motion.button
+              {/* <motion.button
                 className='px-6 py-2 bg-primary text-white rounded-md flex items-center space-x-2'
                 onClick={downloadCV}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
               >
                 <FaDownload /> <span>Download CV</span>
-              </motion.button>
+              </motion.button> */}
               <motion.a
                 href='tel:+254740924507'
                 className='px-6 py-2 border border-primary text-white rounded-md hover:bg-primary hover:text-white flex items-center space-x-2'
