@@ -1,4 +1,51 @@
 [
+    {
+    "id": "myley-salon",
+    "title": "Myley Hairstylists Management System",
+    "description": "A comprehensive salon management system with appointment scheduling, staff management, inventory tracking, and customer relationship management. Features include real-time dashboard analytics, payroll management, and automated notifications.",
+    "image": "/media/myley/main-dashboard.jpeg",
+    "images": [
+      "/media/myley/main-dashboard.jpeg",
+      "/media/myley/job-items.png",
+      "/media/myley/job-que.png",
+      "/media/myley/payroll-deductions.png",
+      "/media/myley/payroll-detail.png",
+      "/media/myley/reportings.png",
+      "/media/myley/staff-earning.png"
+    ],
+    "technologies": ["React", "Node.js", "Express.js", "MySQL", "TailwindCSS", "Chart.js"],
+    "liveLink": "https://app.myleyhairstylists.co.ke/dashboard",
+    "githubLink": "https://github.com/wamae-ndiritu/salon-management",
+    "category": "full-stack",
+    "featured": true,
+    "year": "2024"
+  },
+  {
+    "id": "rozzette-ecommerce",
+    "title": "Rozzette E-commerce Platform",
+    "description": "A modern, full-featured e-commerce platform with advanced product management, order tracking, and analytics dashboard. Built with Next.js for optimal performance and SEO, featuring secure payment integration, inventory management, and comprehensive admin controls.",
+    "image": "/media/rozzette/home.png",
+    "images": [
+      "/media/rozzette/home.png",
+      "/media/rozzette/admin-dashboard.png",
+      "/media/rozzette/products.png",
+      "/media/rozzette/product-details.png",
+      "/media/rozzette/orders.png",
+      "/media/rozzette/order-details.png",
+      "/media/rozzette/order-tracking.png",
+      "/media/rozzette/categories.png",
+      "/media/rozzette/user-orders.png",
+      "/media/rozzette/admin-order-details.png",
+      "/media/rozzette/admin-login.png",
+      "/media/rozzette/login.png"
+    ],
+    "technologies": ["Next.js", "MySQL", "TailwindCSS", "Shadcn/ui", "TypeScript", "Prisma"],
+    "liveLink": "https://rozzette.co.ke",
+    "githubLink": "https://github.com/wamae-ndiritu/rozzette-ecommerce",
+    "category": "full-stack",
+    "featured": true,
+    "year": "2024"
+  },
   {
     "id": 14,
     "title": "The Life of Mzee Ngariuku Wa Matu",

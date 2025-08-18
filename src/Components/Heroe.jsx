@@ -63,16 +63,28 @@ const Heroe = () => {
             menuOpen ? "block bg-black text-primary" : "hidden"
           }`}
         >
-          {["About Me", "Services", "Projects", "Blogs", "Contacts"].map(
-            (item, index) => (
-              <li
-                key={index}
-                className='py-2 px-4 text-center md:py-0 hover:text-gray-300 text-white'
-                onClick={() => setMenuOpen(false)}
-              >
-                <a href={`#${item.toLowerCase().replace(" ", "")}`}>{item}</a>
-              </li>
-            )
+          {["About Me", "Services", "Featured Projects", "Projects", "Blogs", "Contacts"].map(
+            (item, index) => {
+              // Map display names to actual section IDs
+              const sectionMap = {
+                "About Me": "about-me",
+                "Services": "services",
+                "Featured Projects": "featured-projects",
+                "Projects": "projects",
+                "Blogs": "blogs",
+                "Contacts": "contacts"
+              };
+              
+              return (
+                <li
+                  key={index}
+                  className='py-2 px-4 text-center md:py-0 hover:text-gray-300 text-white'
+                  onClick={() => setMenuOpen(false)}
+                >
+                  <a href={`#${sectionMap[item]}`}>{item}</a>
+                </li>
+              );
+            }
           )}
         </ul>
         <a

@@ -3,6 +3,7 @@ import Heroe from "./Components/Heroe";
 import Location from "./Components/location/Location";
 import AboutMe from "./Components/AboutMe";
 import ServiceSection from "./Components/services/ServiceScetion";
+import FeaturedProjects from "./Components/projects/FeaturedProjects";
 import ProjectSection from "./Components/projects/ProjectSection";
 import ArticlesSection from "./Components/articles/ArticlesSection";
 import { useEffect, useState } from "react";
@@ -28,6 +29,7 @@ function App() {
           <Heroe />
           <AboutMe />
           <ServiceSection />
+          <FeaturedProjects />
           <ProjectSection />
           <ArticlesSection />
           <Location />
