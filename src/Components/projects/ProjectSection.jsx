@@ -6,6 +6,9 @@ import "./ProjectsSection.css";
 const ProjectSection = () => {
   const [selectedProject, setSelectedProject] = useState(null);
 
+  // Filter out the featured projects
+  const regularProjects = projectsData.filter(project => !project.featured);
+
   const handleCardClick = (project) => {
     setSelectedProject(project);
   };
@@ -21,7 +24,7 @@ const ProjectSection = () => {
         <div className='hr'></div>
       </div>
       <div className='row'>
-        {projectsData.map((project, index) => (
+        {regularProjects.map((project, index) => (
           <motion.div
             key={project.id}
             className='col-lg-4 col-md-6 padding-medium'

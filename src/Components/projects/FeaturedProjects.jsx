@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink } from 'lucide-react';
 import './FeaturedProject.css';
 
 const FeaturedProjects = () => {
