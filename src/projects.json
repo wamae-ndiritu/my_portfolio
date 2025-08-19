@@ -52,7 +52,7 @@
     "description": "This website was built to pay last respect to my GrandPa who died on September 2024 at the age of 98 years. I couldn't celebrate him better than having a website during his burial. May his soul Rest In Peace.",
     "url": "https://ngariukuwamatu.netlify.app/",
     "type": "website",
-    "images": ["/assets/guka-1.png", "/assets/guka-2.png"],
+    "images": ["/media/guka-1.png", "/media/guka-2.png"],
     "technologies": ["React JS", "Tailwind"]
   },
   {
@@ -61,9 +61,9 @@
     "url": "https://bitnine-clone-react.netlify.app/",
     "category": "website",
     "images": [
-      "/assets/bitnine.png",
-      "/assets/bitnine-1.png",
-      "/assets/bitnine-2.png"
+      "/media/bitnine.png",
+      "/media/bitnine-1.png",
+      "/media/bitnine-2.png"
     ],
     "technologies": ["React JS"],
     "type": "website",
@@ -74,7 +74,7 @@
     "title": "My Purpose Story",
     "url": "https://mps.emmanuelmango.com/",
     "category": "app",
-    "images": ["/assets/mps.png"],
+    "images": ["/media/mps.png"],
     "technologies": [
       "React JS",
       "Tailwind",
@@ -91,10 +91,10 @@
     "url": "https://richpaints.co.ke/",
     "category": "website",
     "images": [
-      "/assets/richpaints-1.png",
-      "/assets/richpaints-2.png",
-      "/assets/richpaints-3.png",
-      "/assets/richpaints-4.png"
+      "/media/richpaints-1.png",
+      "/media/richpaints-2.png",
+      "/media/richpaints-3.png",
+      "/media/richpaints-4.png"
     ],
     "technologies": ["React JS", "Bootstrap"],
     "type": "website",
@@ -106,13 +106,13 @@
     "url": "https://kibandaski-management-system.netlify.app",
     "category": "web_app",
     "images": [
-      "/assets/kibandaski.png",
-      "/assets/kibandaski-1.png",
-      "/assets/kibandaski-2.png",
-      "/assets/kibandaski-3.png",
-      "/assets/kibandaski-4.png",
-      "/assets/kibandaski-5.png",
-      "/assets/kibandaski-6.png"
+      "/media/kibandaski.png",
+      "/media/kibandaski-1.png",
+      "/media/kibandaski-2.png",
+      "/media/kibandaski-3.png",
+      "/media/kibandaski-4.png",
+      "/media/kibandaski-5.png",
+      "/media/kibandaski-6.png"
     ],
     "technologies": [
       "React JS",
@@ -131,9 +131,9 @@
     "url": "https://shangilia.netlify.app/",
     "category": "app",
     "images": [
-      "/assets/shangilia.png",
-      "/assets/shangilia-2.png",
-      "/assets/shangilia-2.png"
+      "/media/shangilia.png",
+      "/media/shangilia-2.png",
+      "/media/shangilia-2.png"
     ],
     "technologies": [
       "React JS",
@@ -151,7 +151,7 @@
     "title": "Purpose Clarity Tool",
     "url": "https://pct.emmanuelmango.com/",
     "category": "app",
-    "images": ["/assets/pct.png"],
+    "images": ["/media/pct.png"],
     "technologies": [
       "React JS",
       "Tailwind",
@@ -167,7 +167,7 @@
     "title": "Photographer Portfolio",
     "url": "https://wanderi-photography.netlify.app/",
     "category": "website",
-    "images": ["/assets/photographer-portfolio.png"],
+    "images": ["/media/photographer-portfolio.png"],
     "technologies": ["HTML", "CSS", "JavaScript"],
     "type": "website",
     "description": "A portfolio website for photographers."
@@ -177,7 +177,7 @@
     "title": "Nutritionist Portolio",
     "url": "https://nutritionist-portfolio.vercel.app/",
     "category": "website",
-    "images": ["/assets/nutritionist-portfolio.png"],
+    "images": ["/media/nutritionist-portfolio.png"],
     "technologies": ["HTML", "Bootstrap", "JavaScript", "Django"],
     "type": "website",
     "description": "A portfolio website for nutritionists."
@@ -187,7 +187,7 @@
     "title": "Chamaa Management System",
     "url": ["https://chamaa-sacco.netlify.app/"],
     "category": "app",
-    "images": ["/assets/chamaa.png"],
+    "images": ["/media/chamaa.png"],
     "technologies": ["React JS", "Bootstrap", "Node JS", "express.js", "MYSQL"],
     "type": "web_app",
     "description": "This is a management system aimed to help small social groups; chamaa manage their operations such as collecting members contributions etc."
@@ -197,7 +197,7 @@
     "title": "Validation Form with JavaScript",
     "url": "https://validate-form-with-js.netlify.app/",
     "category": "features",
-    "images": ["/assets/form.png"],
+    "images": ["/media/form.png"],
     "technologies": ["HTML", "CSS", "JavaScript"],
     "type": "website",
     "description": "A simple project aimed at using JavaScript to add form validations."
@@ -207,7 +207,7 @@
     "title": "Rozzette Fashion Store",
     "url": "https://rozzette.netlify.app/",
     "category": "app",
-    "images": ["/assets/rozzette.png"],
+    "images": ["/media/rozzette.png"],
     "technologies": ["React JS", "Bootstrap"],
     "type": "web_app",
     "description": "An ecommerce store."
@@ -217,7 +217,7 @@
     "title": "Nice Mounts",
     "url": "https://nice-mount.netlify.app/",
     "category": "app",
-    "images": ["/assets/nicemounts.png"],
+    "images": ["/media/nicemounts.png"],
     "technologies": [
       "React JS",
       "Bootstrap",
@@ -233,11 +233,11 @@
     "title": "Timiza Logistics App",
     "url": "",
     "images": [
-      "/assets/timiza.jpeg",
-      "/assets/timiza-1.jpeg",
-      "/assets/timiza-2.jpeg",
-      "/assets/timiza-3.jpeg",
-      "/assets/timiza-4.jpeg"
+      "/media/timiza.jpeg",
+      "/media/timiza-1.jpeg",
+      "/media/timiza-2.jpeg",
+      "/media/timiza-3.jpeg",
+      "/media/timiza-4.jpeg"
     ],
     "type": "mobile_app",
     "description": "A mobile app for a Logistics company.",

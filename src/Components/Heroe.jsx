@@ -160,7 +160,7 @@ const Heroe = () => {
         <motion.div
           className={`fixed ${
             scrolled
-              ? "right-4 top-1/2 transform -translate-y-1/2 flex flex-col space-y-4"
+              ? "right-4 top-1/2 transform -translate-y-1/2 flex flex-col space-y-4 z-[100]"
               : "bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-4"
           }`}
           initial={{ opacity: 0 }}

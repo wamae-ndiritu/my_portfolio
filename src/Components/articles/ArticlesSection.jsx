@@ -49,10 +49,17 @@ const ArticlesSection = () => {
   };
 
   return (
-    <div className='container mx-auto py-12' id='articles'>
-      <div className='text-center mb-8'>
-        <h3 className='text-3xl font-bold text-primary'>Blogs</h3>
-        <div className='w-16 h-1 bg-primary mx-auto mt-2'></div>
+    <div className='container mx-auto py-12' id='blogs'>
+      <div className='text-center mb-16'>
+        <motion.h3
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className='text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-4'>
+          My <span className='text-blue-600'>Blogs</span>
+        </motion.h3>
+        <div className='w-24 h-1 bg-gradient-to-r from-blue-600 to-red-500 mx-auto'></div>
       </div>
       <p className='text-center text-gray-600 mb-12 px-4'>
         As part of sharing my knowledge, I write technical articles explaining
@@ -73,8 +80,7 @@ const ArticlesSection = () => {
               variants={cardVariants}
               initial='hidden'
               animate='visible'
-              className='bg-white shadow-lg rounded-lg overflow-hidden transform transition hover:scale-105'
-            >
+              className='bg-white shadow-lg rounded-lg overflow-hidden transform transition hover:scale-105'>
               {imageUrl && (
                 <img
                   src={imageUrl}
@@ -91,8 +97,7 @@ const ArticlesSection = () => {
                   href={article.link}
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='text-primary hover:underline mt-4 block'
-                >
+                  className='text-primary hover:underline mt-4 block'>
                   Read More
                 </a>
               </div>
@@ -105,8 +110,7 @@ const ArticlesSection = () => {
           href='https://wamae-ndiritu.medium.com/'
           target='_blank'
           rel='noopener noreferrer'
-          className='bg-primary text-white px-6 py-3 rounded-full shadow-lg hover:bg-primary-dark transition'
-        >
+          className='bg-primary text-white px-6 py-3 rounded-full shadow-lg hover:bg-primary-dark transition'>
           View More on Medium
         </a>
       </div>

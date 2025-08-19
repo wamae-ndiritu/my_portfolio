@@ -19,31 +19,34 @@ const AboutMe = () => {
       title: "FullStack Developer (Remote)",
       company: "FitViz, USA",
       period: "March 2025 - Present",
-      description: "Working remotely as a contract and part-time FullStack Developer, developing fitness and health-related web applications using modern technologies.",
-      skills: ["React.js", "Node.js", "MongoDB", "REST APIs"],
-      color: "blue"
+      description:
+        "Working remotely as a part-time FullStack Developer, developing fitness-related applications using modern technologies.",
+      skills: ["React.js", "Python", "Tailwind CSS", "AWS", "REST APIs"],
+      color: "blue",
     },
     {
       id: 2,
-      type: "work",
-      icon: Users,
-      title: "ICT Trainer Intern",
-      company: "Kabete National Polytechnic",
-      period: "April 2025 - Sept 2025",
-      description: "Training students in programming courses including Java and Web Development. Designed curriculum and conducted hands-on coding sessions.",
-      skills: ["Java", "Web Development", "Teaching", "Curriculum Design"],
-      color: "green"
-    },
-    {
-      id: 3,
       type: "work",
       icon: Code,
       title: "Web Developer Mentor",
       company: "eMobilis Mobile Technology Institute",
       period: "Oct 2024 - Dec 2024",
-      description: "Mentored students in their Web Development Bootcamp, providing guidance on modern web technologies and best practices.",
+      description:
+        "Mentored students in their Web Development Bootcamp, providing guidance on modern web technologies and best practices.",
       skills: ["JavaScript", "React.js", "Mentoring", "Project Guidance"],
-      color: "purple"
+      color: "purple",
+    },
+    {
+      id: 3,
+      type: "work",
+      icon: Users,
+      title: "ICT Trainer Intern",
+      company: "Kabete National Polytechnic",
+      period: "April 2024 - Sept 2024",
+      description:
+        "Training students in programming courses including Java and Web Development. Designed curriculum and conducted hands-on coding sessions.",
+      skills: ["Java", "Web Development", "Teaching", "Curriculum Design"],
+      color: "green",
     },
     {
       id: 4,
@@ -52,9 +55,14 @@ const AboutMe = () => {
       title: "Freelance Developer",
       company: "Various Clients",
       period: "2022 - Present",
-      description: "Developed custom web applications and management systems for various clients, including salon management systems and e-commerce platforms.",
-      skills: ["Full-Stack Development", "Client Relations", "Project Management"],
-      color: "red"
+      description:
+        "Developed custom web applications and management systems for various clients, including salon management systems and e-commerce platforms.",
+      skills: [
+        "Full-Stack Development",
+        "Client Relations",
+        "Project Management",
+      ],
+      color: "red",
     },
     {
       id: 5,
@@ -63,9 +71,10 @@ const AboutMe = () => {
       title: "Bachelor of Education in ICT",
       company: "University of Nairobi",
       period: "2021 - 2025",
-      description: "Comprehensive education in Information and Communication Technology with focus on software development and educational technology.",
+      description:
+        "Comprehensive education in Information and Communication Technology with focus on software development and educational technology.",
       skills: ["Computer Science", "Education Technology", "Research"],
-      color: "indigo"
+      color: "indigo",
     },
     {
       id: 6,
@@ -74,9 +83,10 @@ const AboutMe = () => {
       title: "Software Engineering Certificate",
       company: "ALX Africa",
       period: "2023",
-      description: "Intensive software engineering program covering full-stack development, algorithms, and industry best practices.",
+      description:
+        "Intensive software engineering program covering full-stack development, algorithms, and industry best practices.",
       skills: ["Python", "C", "Data Structures", "Algorithms"],
-      color: "orange"
+      color: "orange",
     },
     {
       id: 7,
@@ -85,10 +95,11 @@ const AboutMe = () => {
       title: "Web Developer Certified",
       company: "eMobilis Mobile Technology Institute",
       period: "2022",
-      description: "Comprehensive web development certification covering modern front-end and back-end technologies.",
+      description:
+        "Comprehensive web development certification covering modern front-end and back-end technologies.",
       skills: ["HTML/CSS", "JavaScript", "PHP", "MySQL"],
-      color: "teal"
-    }
+      color: "teal",
+    },
   ];
 
   const getIconColor = (color) => {
